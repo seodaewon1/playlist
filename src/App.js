@@ -16,19 +16,19 @@ import MusicPlayerProvider from "./context/MusicPlayerProvider";
 const App = () => {
     return (
         <MusicPlayerProvider>
-        <BrowserRouter>
-            <Header />
-            <Main>
-                <Search />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/mymusic" element={<Mymusic />} />
-                    <Route path="/playlist/:id" element={<PlayList />} />
-                    <Route path="/chart/:id" element={<ChartList />} />
-                </Routes>
-            </Main>
-            <Aside />
-        </BrowserRouter>
+            <BrowserRouter>
+                <Header />
+                <Main>
+                    <Search />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/mymusic" element={<Mymusic />} />
+                        <Route path="/playlist/:id" element={<PlayList />} />
+                        <Route path="/chart/:id" element={<ChartList />} />
+                    </Routes>
+                </Main>
+                <Aside />
+            </BrowserRouter>
         </MusicPlayerProvider>
     );
 };
