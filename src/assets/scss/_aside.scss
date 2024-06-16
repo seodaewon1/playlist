@@ -4,7 +4,7 @@
     top: 0;
     width: 400px;
     height: 100vh;
-    background-color: var(--black300);
+    background-color: #222;
     box-shadow: 0 0 10px var(--white200);
 
     .play-now {
@@ -154,6 +154,16 @@
         padding: 2rem;
         height: calc(100vh - 490px);
         overflow-y: scroll;
+
+        /* 스크롤바 숨기기 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
 
         h3 {
             text-align: center;
