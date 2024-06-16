@@ -13,7 +13,7 @@
         a {
             font-size: 30px;
             font-weight: 900;
-            color: #7D57FF;
+            color: #282cfa;
         }
 
     }
@@ -34,12 +34,15 @@
             font-weight: 400;
             font-size: 20px;
             cursor: pointer;
-            padding: 16px 0;
+            padding: 16px;
             border-left: 5px solid transparent;
             font-weight: 900;
+            display: flex;
+            justify-content: space-between;
 
             a {
                 display: block;
+                margin-right: 10px;
             }
 
             .icon {
@@ -97,5 +100,33 @@
                 }
             }
         }
+    }
+}
+
+button {
+    border-radius: 10px;
+    background: #e8f9ff;
+    cursor: pointer;
+
+    svg {
+        font-size: 10px;
+        background-color: #fff;
+        display: flex;
+
+
+        &:hover {
+            background-color: #f5f5ff;
+        }
+    }
+}
+
+.add {
+    display: flex;
+
+    input {
+        padding: 5px;
+        background-color: #d6d6d6;
+        border-radius: 10px;
+        margin-right: 20px;
     }
 }

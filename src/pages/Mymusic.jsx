@@ -14,7 +14,7 @@ const Mymusic = () => {
     return (
         <section id='myMusic'>
             <Chart
-                title="🎵 웹쓰의 음악 리스트"
+                title="🎵 머원이의 음악 리스트"
                 data={data}
                 showCalendar={false}
             />

@@ -135,7 +135,7 @@ const Chart = ({ title, showCalendar, selectedDate, onDateChange, minDate, maxDa
                                 <span className='listAdd' onClick={() => handleAddToList(result)}>
                                     <MdFormatListBulletedAdd /><span className='ir'>리스트 추가하기</span>
                                 </span>
-                                <span className='chartAdd'onClick={() => handleAddToPlaylistClick(result)}>
+                                <span className='chartAdd' onClick={() => handleAddToPlaylistClick(result)}>
                                     <MdHive /><span className='ir'>나의 리스트에 추가하기</span>
                                 </span>
                             </li>
@@ -144,8 +144,8 @@ const Chart = ({ title, showCalendar, selectedDate, onDateChange, minDate, maxDa
                     <span className='close' onClick={() => setYoutubeResults([])}><MdClose /></span>
                 </section>
             )}
-             <ToastContainer />
-             <Modal
+            <ToastContainer />
+            <Modal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 onAddToPlaylist={handleAddToPlaylist}

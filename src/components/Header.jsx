@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import { FcRating, FcPlus, FcApproval } from "react-icons/fc";
+import { FcRating, FcPlus, FcApproval, FcDeleteRow } from "react-icons/fc";
 import { IoMusicalNotes } from "react-icons/io5";
 
 const Header = () => {
@@ -40,29 +39,39 @@ const Header = () => {
         }
     };
 
+    const handleDeleteItem = (key) => {
+        localStorage.removeItem(key); // 로컬 스토리지에서 플레이리스트 삭제
+        const count = Number(localStorage.getItem('playlistCount')) - 1;
+        localStorage.setItem('playlistCount', count.toString());
+        setPlaylistCount(count); // 상태 업데이트
+    };
+
     const playlistLinks = [];
     for (let i = 1; i <= playlistCount; i++) {
         const playlistKey = `playlist${i}`;
         const playlist = JSON.parse(localStorage.getItem(playlistKey));
-        playlistLinks.push(
-            <li key={i}>
-                <Link to={`/playlist/${playlistKey}`}><span className='icon2'><FcApproval /></span>{playlist.name}</Link>
-            </li>
-        );
+        if (playlist) {
+            playlistLinks.push(
+                <li key={i}>
+                    <Link to={`/playlist/${playlistKey}`}><span className='icon2'><FcApproval /></span>{playlist.name}</Link>
+                    <button onClick={() => handleDeleteItem(playlistKey)}>삭제</button>
+                </li>
+            );
+        }
     }
 
     return (
         <header id='header' role='banner'>
             <h1 className='logo'>
-                <Link to='/'><IoMusicalNotes />나의 뮤직 챠트</Link>
+                <Link to='/'><IoMusicalNotes />Play List</Link>
             </h1>
             <h2>chart</h2>
             <ul>
-                <li><Link to='chart/melon'><span className='icon'></span>멜론 챠트</Link></li>
-                <li><Link to='chart/bugs'><span className='icon'></span>벅스 챠트</Link></li>
-                <li><Link to='chart/apple'><span className='icon'></span>애플 챠트</Link></li>
-                <li><Link to='chart/genie'><span className='icon'></span>지니 챠트</Link></li>
-                <li><Link to='chart/billboard'><span className='icon'></span>빌보드 챠트</Link></li>
+                <li><Link to='chart/melon'><span className='icon'></span>멜론 차트</Link></li>
+                <li><Link to='chart/bugs'><span className='icon'></span>벅스 차트</Link></li>
+                <li><Link to='chart/apple'><span className='icon'></span>애플 차트</Link></li>
+                <li><Link to='chart/genie'><span className='icon'></span>지니 차트</Link></li>
+                <li><Link to='chart/billboard'><span className='icon'></span>빌보드 차트</Link></li>
             </ul>
             <h2>playlist</h2>
             <ul>
@@ -70,13 +79,13 @@ const Header = () => {
                 {playlistLinks}
                 <li>
                     {showInput ? (
-                        <div>
+                        <div className='add'>
                             <input
                                 type='text'
                                 value={newItem}
                                 onChange={handleInputChange}
                             />
-                            <button onClick={handleAddItem}>Add</button>
+                            <button onClick={handleAddItem}>추가</button>
                         </div>
                     ) : (
                         <Link to='#' onClick={handleAddClick}><span className='icon2'><FcPlus /></span>Create</Link>
