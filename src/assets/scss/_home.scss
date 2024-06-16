@@ -10,6 +10,11 @@
     color: #ff4500;
 }
 
+.home h1 {
+    font-weight: 900;
+    color: #ff3b3b;
+}
+
 .home p {
     font-size: 1.2em;
     margin-bottom: 30px;
@@ -47,23 +52,32 @@ img {
 
 .chart-section {
     margin-top: 20px;
-    background-color: #c7efff8a;
+    background-color: #98dcf754;
+    margin-left: -1px;
 
-    // &:nth-child(1) {
-    //     background-color: #c8fdbb8a;
-    // }
+    &:nth-child(1) {
 
-    // &:nth-child(2) {
-    //     background-color: #eb6a37bd;
-    // }
+        border: 1px solid #8d8d8d7c;
+    }
 
-    // &:nth-child(3) {
-    //     background-color: #d4e9e9;
-    // }
+    &:nth-child(2) {
 
-    // &:nth-child(4) {
-    //     background-color: #b6c8cf;
-    // }
+        border: 1px solid #8d8d8d7c;
+    }
+
+    &:nth-child(3) {
+
+        border: 1px solid #8d8d8d7c;
+    }
+
+    &:nth-child(4) {
+
+        border: 1px solid #8d8d8d7c;
+    }
+
+    &:nth-child(5) {
+        border: 1px solid #8d8d8d7c;
+    }
 
 }
 

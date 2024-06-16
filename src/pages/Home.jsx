@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import useFetchData from '../hook/useFetchData';
 import axios from 'axios';
+
 const Home = () => {
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
@@ -13,6 +13,8 @@ const Home = () => {
     `https://raw.githubusercontent.com/webs9919/music-best/main/billboard/billboard100_${formattedDate}.json`,
     `https://raw.githubusercontent.com/webs9919/music-best/main/apple/apple100_${formattedDate}.json`,
   ];
+
+  const chartTitles = ["멜론", "벅스", "지니", "빌보드", "애플"];
 
   const [charts, setCharts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,10 +41,11 @@ const Home = () => {
     <div className="home">
       <h2>환영합니다! 🎵</h2>
       <p>당신만의 음악 플레이리스트를 만들어 보세요.</p>
+      <h1>TOP5</h1>
       <div className="chartli">
         {charts.map((chart, index) => (
           <div key={index} className="chart-section">
-            <h3>차트 {index + 1}</h3>
+            <h3>{chartTitles[index]}</h3>
             <ul>
               {chart.map((song, songIndex) => (
                 <li key={songIndex}>
