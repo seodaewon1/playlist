@@ -67,11 +67,11 @@ const Header = () => {
             </h1>
             <h2>chart</h2>
             <ul>
-                <li><Link to='chart/melon'><span className='icon'></span>멜론 차트</Link></li>
-                <li><Link to='chart/bugs'><span className='icon'></span>벅스 차트</Link></li>
-                <li><Link to='chart/apple'><span className='icon'></span>애플 차트</Link></li>
-                <li><Link to='chart/genie'><span className='icon'></span>지니 차트</Link></li>
-                <li><Link to='chart/billboard'><span className='icon'></span>빌보드 차트</Link></li>
+                <li><Link to='chart/melon'><span className='icon'></span>Melon</Link></li>
+                <li><Link to='chart/bugs'><span className='icon'></span>Bugs</Link></li>
+                <li><Link to='chart/apple'><span className='icon'></span>Apple</Link></li>
+                <li><Link to='chart/genie'><span className='icon'></span>Jennie</Link></li>
+                <li><Link to='chart/billboard'><span className='icon'></span>Billboard</Link></li>
             </ul>
             <h2>playlist</h2>
             <ul>

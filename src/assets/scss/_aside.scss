@@ -4,7 +4,7 @@
     top: 0;
     width: 400px;
     height: 100vh;
-    background-color: var(--white);
+    background-color: var(--black300);
     box-shadow: 0 0 10px var(--white200);
 
     .play-now {
@@ -18,7 +18,7 @@
             font-family: var(--fontJ);
             font-weight: 300;
             margin-bottom: 10px;
-            color: var(--black300);
+            color: var(--white);
 
             svg {
                 color: var(--pointColor);
@@ -161,7 +161,7 @@
             font-family: var(--fontJ);
             font-weight: 300;
             margin-bottom: 10px;
-            color: var(--black300);
+            color: var(--white);
 
             svg {
                 color: var(--pointColor);
