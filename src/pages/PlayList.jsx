@@ -12,7 +12,7 @@ const Playlist = () => {
     }, [id]);
 
     return (
-        <section id="playlist">
+        <section id="playlist" className="playlist-scroll">
             {playlist.items.length > 0 ? (
                 <Chart
                     title={`${playlist.name} 리스트`}

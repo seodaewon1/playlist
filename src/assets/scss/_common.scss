@@ -1,9 +1,11 @@
-body{
+body {
     background-image: url(../img/main.jpg);
+    background-size: cover;
 }
 
+
 #main {
-//    background-image: url(../img/main.jpg);
+    object-fit: cover;
     margin-left: 260px;
     margin-right: 400px;
     position: relative;

@@ -1,11 +1,12 @@
 #header {
+    font-family: var(--fontE);
     position: fixed;
     left: 0;
     top: 0;
     width: 260px;
     height: 100vh;
-    background-color: #222222;
-    box-shadow: 0 0 10px var(--white200);
+    box-shadow: 0 0 8px var(--white200);
+    background: linear-gradient(to top, #d3d3d31f, #ffffff96);
 
     h1 {
         padding: 2rem 2rem 1rem 2rem;
@@ -13,7 +14,6 @@
         a {
             font-size: 30px;
             font-weight: 900;
-            color: #cecece;
         }
 
     }
@@ -22,7 +22,6 @@
         font-family: var(--fontJ);
         font-size: 12px;
         font-weight: 900;
-        color: var(--white400);
         text-transform: uppercase;
         letter-spacing: 2px;
         padding: 2rem 2rem 1rem 2rem;
@@ -30,7 +29,6 @@
 
     ul {
         li {
-            color: var(--black500);
             font-weight: 400;
             font-size: 20px;
             cursor: pointer;
@@ -78,7 +76,8 @@
             }
 
             &:hover {
-                background-color: #f5f5ff;
+                background-color: #00006d63;
+
             }
 
             &.active {
@@ -104,8 +103,7 @@
 }
 
 button {
-    border-radius: 10px;
-    background: #bebebe;
+    background: none;
     cursor: pointer;
 
     svg {
@@ -125,8 +123,45 @@ button {
 
     input {
         padding: 5px;
-        background-color: #d6d6d6;
-        border-radius: 10px;
+        background-color: #ececec;
         margin-right: 20px;
     }
+}
+
+.list-add-delete {
+    max-height: 800px;
+    /* 원하는 높이로 설정 */
+    overflow-y: auto;
+    /* 스크롤 추가 */
+    padding-right: 10px;
+    /* 스크롤 바와 내용 간의 간격 */
+    box-sizing: border-box;
+}
+
+.list-add-delete {
+    max-height: 300px;
+    /* 원하는 높이로 설정 */
+    overflow-y: scroll;
+    /* 스크롤 추가 */
+    padding-right: 10px;
+    /* 스크롤 바와 내용 간의 간격 */
+    box-sizing: border-box;
+}
+
+/* 스크롤바 숨기기 */
+.list-add-delete::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.list-add-delete {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.list-add-delete::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
 }

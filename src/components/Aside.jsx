@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { MusicPlayerContext } from '../context/MusicPlayerProvider';
 import { IoMusicalNotes, IoPlaySkipForward, IoPlaySkipBack, IoPlay, IoPause, IoRepeat, IoShuffleOutline } from 'react-icons/io5';
 import ReactPlayer from 'react-player';
@@ -25,6 +25,7 @@ const Aside = () => {
 
     const currentTrackRef = useRef(null);
     const playerRef = useRef(null);
+    const [volume, setVolume] = useState(0.5); // 볼륨 상태 추가 및 초기값 설정
 
     useEffect(() => {
         if (currentTrackRef.current) {
@@ -71,6 +72,11 @@ const Aside = () => {
         }
     };
 
+    const handleVolumeChange = (event) => {
+        const vol = parseFloat(event.target.value);
+        setVolume(vol);
+    };
+
     return (
         <aside id="aside">
             <div className="play-now">
@@ -87,6 +93,7 @@ const Aside = () => {
                                 width="100%"
                                 height="100%"
                                 playing={isPlaying}
+                                volume={volume} // 볼륨 설정
                                 onEnded={handleTrackEndModified}
                                 onProgress={handleProgress}
                                 onDuration={handleDuration}
@@ -133,6 +140,19 @@ const Aside = () => {
                         <span className={`repeat ${isRepeating ? 'active' : ''}`} onClick={toggleRepeat}>
                             <IoRepeat />
                         </span>
+                    </div>
+                </div>
+
+                <div className="volume-control">
+                    <div className="volume-slider">
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value={volume}
+                            onChange={handleVolumeChange}
+                        />
                     </div>
                 </div>
             </div>

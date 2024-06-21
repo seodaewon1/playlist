@@ -50,7 +50,7 @@
 
                 .rank {
                     flex: 0 0 50px;
-                    color: var(--black700);
+                    color: var(--black);
                 }
 
                 .img {
@@ -79,7 +79,7 @@
                 }
 
                 &:hover {
-                    background-color: #c9c9c9;
+                    background-color: #e3f8fc;
 
                     .album {
                         color: var(--black100);

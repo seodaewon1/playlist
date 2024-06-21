@@ -10,11 +10,11 @@ const Home = () => {
     `https://raw.githubusercontent.com/webs9919/music-best/main/melon/melon100_${formattedDate}.json`,
     `https://raw.githubusercontent.com/webs9919/music-best/main/bugs/bugs100_${formattedDate}.json`,
     `https://raw.githubusercontent.com/webs9919/music-best/main/genie/genie100_${formattedDate}.json`,
-    `https://raw.githubusercontent.com/webs9919/music-best/main/billboard/billboard100_${formattedDate}.json`,
     `https://raw.githubusercontent.com/webs9919/music-best/main/apple/apple100_${formattedDate}.json`,
+    `https://raw.githubusercontent.com/webs9919/music-best/main/billboard/billboard100_${formattedDate}.json`,
   ];
 
-  const chartTitles = ["멜론", "벅스", "지니", "빌보드", "애플"];
+  const chartTitles = ["멜론", "벅스", "지니", "애플", "빌보드"];
 
   const [charts, setCharts] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -74,7 +74,7 @@ const Header = () => {
                 <li><Link to='chart/billboard'><span className='icon'></span>Billboard</Link></li>
             </ul>
             <h2>playlist</h2>
-            <ul>
+            <ul className='list-add-delete'>
                 <li><Link to='/mymusic'><span className='icon2'><FcRating /></span>Mymusic</Link></li>
                 {playlistLinks}
                 <li>

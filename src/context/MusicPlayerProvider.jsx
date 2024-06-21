@@ -87,13 +87,13 @@ const MusicPlayerProvider = ({ children }) => {
     };
 
     return (
-        <MusicPlayerContext.Provider 
-            value={{ 
+        <MusicPlayerContext.Provider
+            value={{
                 musicData,
                 currentTrackIndex,
                 isPlaying,
                 played,
-                duration,         
+                duration,
                 playTrack,
                 pauseTrack,
                 prevTrack,
@@ -107,7 +107,7 @@ const MusicPlayerProvider = ({ children }) => {
                 handleTrackEnd,
                 addTrackToList,
                 addTrackToEnd
-              }}>
+            }}>
             {children}
         </MusicPlayerContext.Provider>
     )
