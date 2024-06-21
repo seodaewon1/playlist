@@ -1,9 +1,14 @@
+body{
+    background-image: url(../img/main.jpg);
+}
+
 #main {
-    background-color: #9b9b9b;
+//    background-image: url(../img/main.jpg);
     margin-left: 260px;
     margin-right: 400px;
     position: relative;
     min-height: 100vh;
+
 }
 
 .loading {
