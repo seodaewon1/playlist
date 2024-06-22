@@ -101,8 +101,6 @@
                 }
             }
 
-            .play {}
-
             >span {
                 display: inline-block;
                 width: 40px;
@@ -166,7 +164,7 @@
             font-size: 1.25rem;
             font-weight: 300;
             margin-bottom: 10px;
-            color: var(--white);
+            color: var(--black);
 
             svg {
                 color: #0026a1;
@@ -176,7 +174,6 @@
         ul {
             li {
                 display: flex;
-                flex-wrap: wrap;
                 align-items: center;
                 justify-content: space-between;
                 margin-bottom: 10px;
@@ -196,7 +193,7 @@
                 }
 
                 .title {
-                    width: calc(100% - 80px);
+                    width: calc(100% - 110px);
                     max-height: 45px;
                     font-weight: 300;
                     overflow: hidden;

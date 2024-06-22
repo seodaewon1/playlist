@@ -1,4 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react'
+// MusicPlayerProvider.js
+import React, { createContext, useEffect, useState } from 'react';
 
 export const MusicPlayerContext = createContext();
 
@@ -86,6 +87,20 @@ const MusicPlayerProvider = ({ children }) => {
         setMusicData((prevMusicData) => [...prevMusicData, track]);
     };
 
+    // 재생 목록에서 트랙을 제거하는 함수
+    const removeTrack = (index) => {
+        setMusicData((prevMusicData) => {
+            const newMusicData = prevMusicData.filter((_, i) => i !== index);
+            if (currentTrackIndex === index && newMusicData.length > 0) {
+                setCurrentTrackIndex((prevIndex) => Math.min(prevIndex, newMusicData.length - 1));
+            } else if (newMusicData.length === 0) {
+                setCurrentTrackIndex(0);
+                setIsPlaying(false);
+            }
+            return newMusicData;
+        });
+    };
+
     return (
         <MusicPlayerContext.Provider
             value={{
@@ -106,11 +121,12 @@ const MusicPlayerProvider = ({ children }) => {
                 toggleRepeat,
                 handleTrackEnd,
                 addTrackToList,
-                addTrackToEnd
+                addTrackToEnd,
+                removeTrack // 삭제 함수 추가
             }}>
             {children}
         </MusicPlayerContext.Provider>
-    )
-}
+    );
+};
 
-export default MusicPlayerProvider
+export default MusicPlayerProvider;

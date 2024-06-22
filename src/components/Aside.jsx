@@ -20,12 +20,13 @@ const Aside = () => {
         isShuffling,
         toggleRepeat,
         isRepeating,
-        handleTrackEnd
+        handleTrackEnd,
+        removeTrack // 삭제 함수 가져오기
     } = useContext(MusicPlayerContext);
 
     const currentTrackRef = useRef(null);
     const playerRef = useRef(null);
-    const [volume, setVolume] = useState(0.5); // 볼륨 상태 추가 및 초기값 설정
+    const [volume, setVolume] = useState(0.5);
 
     useEffect(() => {
         if (currentTrackRef.current) {
@@ -93,7 +94,7 @@ const Aside = () => {
                                 width="100%"
                                 height="100%"
                                 playing={isPlaying}
-                                volume={volume} // 볼륨 설정
+                                volume={volume}
                                 onEnded={handleTrackEndModified}
                                 onProgress={handleProgress}
                                 onDuration={handleDuration}
@@ -169,6 +170,12 @@ const Aside = () => {
                         >
                             <span className="img" style={{ backgroundImage: `url(${track.imageURL})` }}></span>
                             <span className="title">{track.title}</span>
+                            <button onClick={(e) => {
+                                e.stopPropagation();
+                                removeTrack(index);
+                            }}>
+                                <em> 삭제</em>
+                            </button>
                         </li>
                     ))}
                 </ul>

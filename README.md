@@ -1,28 +1,14 @@
-# Getting Started with Create My Music App
+# PLAYLIST
 
-이 웹사이트는 Python을 사용하여 음악 데이터를 가져오고, YouTube API를 통해 관련 음악 영상을 표시하는 간단한 웹 애플리케이션입니다.
-최신 음악 트렌드를 확인하고 좋아하는 음악을 YouTube에서 바로 시청해보세요! 무료입니다.
+PLAYLIST는 음악을 사랑하는 여러분을 위해 특별히 제작된 사이트로, 다양한 음원사이트의 리스트를 한곳에서 만나보실 수 있습니다. REACT를 사용하여 개발된 이 사이트는 사용자 경험을 극대화하기 위해 PYTHON으로 음원을 크롤링하고, YOUTUBE API를 활용하여 유튜브 영상을 가져와 재생 기능을 구현했습니다. 여러분이 음악을 즐길 수 있도록 여러 편리한 기능을 제공하며, 언제 어디서나 손쉽게 사용할 수 있는 사이트입니다.
+
+
+[기능]
+-음악 재생
+-음악 랜덤 재생
+-음악 반복 재생
+-플레이리스트 추가, 삭제
+-볼륨 조절
 
 ## 실행하기
 
-`npm start` : 리액트 시작하기
-
-## 필요한 라이브러리 설치
-
-- react를 설치 `npx create-react-app 폴더이름` : 폴더를 생략하고 싶으면 .으로 표시
-- react-router-dom 설치 `npm install react-router-dom` : 주소를 설정하기 위한 라이브러리
-- axios 설치 `npm install axios` : API 라이브러리
-- react icon 설치 `npm install react-icons` : 리액트에 필요한 아이콘
-- react-player 설치 `npm install react-player` : 유튜브 영상 재생
-- sass 설치 `npm install sass` : CSS 라이브러리
-- react-helmet-asyne 설치 `npm install react-helmet-async` : SEO
-- swiper 설치 `npm install swiper` : 이미지 슬라이트
-- spinners 설치 `npm install react-spinners` : 로딩소스
-- datepicker 설치 `npm install react-datepicker` : 로딩소스
-
-```
-npm install react-router-dom axios react-icons react-player sass react-helmet-async swiper react-spinners react-datepicker react-toastify  react-modal
-```
-
-1.  기본 셋팅
-2.  페이지 셋팅

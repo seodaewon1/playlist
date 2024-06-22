@@ -165,3 +165,32 @@ button {
     display: none;
     /* Chrome, Safari, Opera */
 }
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+
+    #header,
+    #aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        background: none;
+    }
+
+    #header {
+        border-bottom: 1px solid var(--white200);
+    }
+
+    #aside {
+        border-top: 1px solid var(--white200);
+    }
+
+    .play-now {
+        padding: 1rem;
+    }
+
+    .play-list {
+        padding: 1rem;
+    }
+}
