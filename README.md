@@ -5,7 +5,7 @@ REACT를 사용하여 개발된 이 사이트는 사용자 경험을 극대화�
 
 
 ## 메인페이지
-[img](/src/assets/img/main-banner.png)
+![img](/src/assets/img/main-banner.png)
 
 
 ## 기능
