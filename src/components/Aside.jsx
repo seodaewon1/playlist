@@ -166,7 +166,7 @@ const Aside = () => {
                             key={index}
                             ref={index === currentTrackIndex ? currentTrackRef : null}
                             onClick={() => playTrack(index)}
-                            className={index === currentTrackIndex ? 'current-track' : ''}
+                            className={index === currentTrackIndex ? 'current-track'  : ''}
                         >
                             <span className="img" style={{ backgroundImage: `url(${track.imageURL})` }}></span>
                             <span className="title">{track.title}</span>
